@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Button, FormGroup, FormControl } from "react-bootstrap"
 import { navigate } from "@reach/router"
+import Image from 'react-bootstrap/Image'
 
 class Login extends Component {
   state = {
@@ -26,6 +27,7 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
+        {/* <Image src="../images/gatsby-icon" fluid></Image> */}
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
             {/* <ControlLabel>Email</ControlLabel> */}

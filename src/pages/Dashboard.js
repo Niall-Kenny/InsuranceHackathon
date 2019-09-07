@@ -47,19 +47,20 @@ class Dashboard extends Component {
 
         return (
             <div>
-                <Header>Vehicles</Header>
-                <DropdownButton id="dropdown-basic-button" title={`Vehicle License Plate: ${userData.licensePlate}`}>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item><Link to="/Addcar">Add car</Link></Dropdown.Item>
-                </DropdownButton>
                 {this.props.location.state.insuranceCost ? 
                 (
                     <ul>
+                    <li>Registration Plate: NC19 3OA</li>
                     <li>Cost of Insurance: {this.props.location.state.insuranceCost}</li>
                 </ul>
                 ) : 
                 <>
+                <Header>Vehicles</Header>
+                <DropdownButton id="dropdown-basic-button" title={`Vehicle License Plate: ${userData.licensePlate}`}>
+                    <Dropdown.Item href="#/action-1">HE17 2FY</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Anothe</Dropdown.Item>
+                    <Dropdown.Item><Link to="/Addcar">Add car</Link></Dropdown.Item>
+                </DropdownButton>
                 <section>
                     <Image src={`${vehicleData.avatar_url}`} fluid />
                 </section>
@@ -72,7 +73,7 @@ class Dashboard extends Component {
                     <li>Fuel type: {vehicleData.fuelType}</li>
                     <li>Car Colour: {vehicleData.colour}</li>
                 </ul>
-                <Button variant="primary" id="paymentsBtn"><Link to="/Dashboard">Payments</Link></Button>
+                <Button variant="primary" id="paymentsBtn"><Link to="/Payments">Payments</Link></Button>
                 </>}
             </div>
         );

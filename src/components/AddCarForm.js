@@ -10,7 +10,8 @@ export default class AddCarForm extends Component {
 		firstName: "",
 		surname:"",
 		drivingExperience: null,
-		age: null
+		age: null,
+		registrationPlate: null
 	};
 
 	render() {
@@ -32,6 +33,10 @@ export default class AddCarForm extends Component {
 				<Form.Group controlId="formDrivingExperience">
 					<Form.Label>Driving Experience</Form.Label>
 					<Form.Control type="number" name="drivingExperience" placeholder="Enter Years Experience" onChange={this.handleChange} value={this.state.drivingExperience}/>
+				</Form.Group>
+				<Form.Group controlId="formRegistrationPlate">
+					<Form.Label>Registration Plate</Form.Label>
+					<Form.Control type="text" name="registrationPlate" placeholder="Enter Registration Plate" onChange={this.handleChange} value={this.state.registrationPlate}/>
 				</Form.Group>
 				<Button variant="primary" type="submit">
 					Submit

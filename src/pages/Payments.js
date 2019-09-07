@@ -65,7 +65,7 @@ class Payments extends Component {
                 <p>Current Balance: £{totalBalance}</p>
                 <p>Cost per Mile: £{costPerMile}</p>
                 <p>Estimate Miles Left: {estimateMileLeft} Miles</p>
-                <Button variant="primary" onClick={this.onClick}>Top up</Button>
+                <Button variant="primary" onClick={this.onClick}>Top up £10</Button>
                 <br></br>
                 <Button variant="primary" id="returnBtn"><Link to="/Dashboard">Back</Link></Button>
             </div>
