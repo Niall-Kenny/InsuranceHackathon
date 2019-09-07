@@ -6,6 +6,7 @@ import Header from '../components/header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../components/Vehicles.css'
 import Image from 'react-bootstrap/Image'
+import {Link} from 'gatsby'
 
 class Dashboard extends Component {
     state = {
@@ -61,7 +62,7 @@ class Dashboard extends Component {
                     <li>Fuel type: {vehicleData.fuelType}</li>
                     <li>Car Colour: {vehicleData.colour}</li>
                 </ul>
-                <Button variant="primary" id="paymentsBtn" href="/">Payments</Button>
+                <Button variant="primary" id="paymentsBtn"><Link to="/Payments">Payments</Link></Button>
             </div>
         );
     }
