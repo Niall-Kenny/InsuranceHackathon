@@ -5,6 +5,7 @@ import Header from "../components/header"
 import Login from "./Login"
 import "./index.css"
 import Dashboard from "./Dashboard";
+import Addcar from "./Addcar"
 import Payments from "./Payments";
 
 class IndexPage extends Component{
@@ -48,6 +49,7 @@ render() {
     <Router>
       <Login path="/"></Login>
       <Dashboard path="/Dashboard"></Dashboard>
+      <Addcar path='/Addcar'></Addcar>
       <Payments path="/Payments"></Payments>
     </Router>
     </>
