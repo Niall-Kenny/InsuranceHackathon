@@ -1,3 +1,12 @@
 .nav-bar {
     text-align: center;
 }
+
+#mainNav {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: black
+}

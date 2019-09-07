@@ -42,12 +42,12 @@ class IndexPage extends Component{
 
 
 render() {
-  const {userData, vehicleData} = this.state
+  // const {userData, vehicleData} = this.state
   return(
     <>
     <Router>
       <Login path="/"></Login>
-      <Dashboard path="/Dashboard" userData={userData} vehicleData={vehicleData}></Dashboard>
+      <Dashboard path="/Dashboard"></Dashboard>
       <Payments path="/Payments"></Payments>
     </Router>
     </>
