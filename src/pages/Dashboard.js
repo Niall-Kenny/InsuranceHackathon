@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../components/Vehicles.css'
 import Image from 'react-bootstrap/Image'
 
-class Vehicles extends Component {
+class Dashboard extends Component {
     state = {
         userData:{
             licensePlate : "mt09nks",
@@ -67,4 +67,4 @@ class Vehicles extends Component {
     }
 }
 
-export default Vehicles;
+export default Dashboard;
