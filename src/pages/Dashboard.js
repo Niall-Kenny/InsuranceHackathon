@@ -6,6 +6,7 @@ import Header from '../components/header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../components/Vehicles.css'
 import Image from 'react-bootstrap/Image'
+import {Link} from "gatsby"
 
 class Dashboard extends Component {
     state = {
@@ -41,14 +42,23 @@ class Dashboard extends Component {
     }
     render() {
         const {userData, vehicleData} = this.state 
+        console.log(this.props.location.state)
+
         return (
             <div>
                 <Header>Vehicles</Header>
                 <DropdownButton id="dropdown-basic-button" title={`Vehicle License Plate: ${userData.licensePlate}`}>
                     <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                     <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    <Dropdown.Item><Link to="/Addcar">Add car</Link></Dropdown.Item>
                 </DropdownButton>
+                {this.props.location.state.insuranceCost ? 
+                (
+                    <ul>
+                    <li>Cost of Insurance: {this.props.location.state.insuranceCost}</li>
+                </ul>
+                ) : 
+                <>
                 <section>
                     <Image src={`${vehicleData.avatar_url}`} fluid />
                 </section>
@@ -61,7 +71,8 @@ class Dashboard extends Component {
                     <li>Fuel type: {vehicleData.fuelType}</li>
                     <li>Car Colour: {vehicleData.colour}</li>
                 </ul>
-                <Button variant="primary" id="paymentsBtn" href="/">Payments</Button>
+                <Button variant="primary" id="paymentsBtn"><Link to="/Dashboard">Payments</Link></Button>
+                </>}
             </div>
         );
     }
