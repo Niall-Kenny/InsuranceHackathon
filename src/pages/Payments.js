@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from '../components/Payments.css'
 import Header from '../components/header';
 import { Button } from 'react-bootstrap';
+import { Link } from "gatsby" 
 
 class Payments extends Component {
   state = {
@@ -65,6 +66,8 @@ class Payments extends Component {
                 <p>Cost per Mile: £{costPerMile}</p>
                 <p>Estimate Miles Left: {estimateMileLeft} Miles</p>
                 <Button variant="primary" onClick={this.onClick}>Top up</Button>
+                <br></br>
+                <Button variant="primary" id="returnBtn"><Link to="/Dashboard">Back</Link></Button>
             </div>
         );
     }
