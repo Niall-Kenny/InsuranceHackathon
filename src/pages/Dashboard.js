@@ -8,6 +8,7 @@ import styles from '../components/Vehicles.css'
 import Image from 'react-bootstrap/Image'
 import {Link} from "gatsby"
 
+
 class Dashboard extends Component {
     state = {
         userData:{
