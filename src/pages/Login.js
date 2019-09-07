@@ -16,7 +16,7 @@ class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    navigate("/dashboard")
+    navigate("/Dashboard")
     this.setState({
       email: "",
       password: "",
