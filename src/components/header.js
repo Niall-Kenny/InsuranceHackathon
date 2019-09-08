@@ -11,9 +11,6 @@ const Header = () => (
   </Nav.Item>
   <Nav.Item>
     <Nav.Link>
-      <Link to="/Addcar">
-      Add Car
-      </Link>
     </Nav.Link>
   </Nav.Item>
 </Nav>
